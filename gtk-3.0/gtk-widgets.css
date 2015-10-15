@@ -509,18 +509,27 @@ GtkComboBox.combobox-entry .button:insensitive {
  * expander *
  ************/
 .expander {
-	color: alpha(currentColor, 0.7);
-	border: alpha(currentColor, 0.7);
-}
-
-.expander:hover {
-	color: alpha(currentColor, 0.8);
-	border-color: alpha(currentColor, 0.8);
+    color: @theme_fg_color;
 }
 
 .expander:active {
-	color: alpha(currentColor, 0.9);
-	border-color: alpha(currentColor, 0.9);
+    color: @theme_fg_color;
+}
+
+.expander:hover {
+    color: @theme_fg_color;
+}
+
+.expander row:selected,
+.expander row:selected:focus {
+    border-color: @theme_selected_fg_color;
+    color: @theme_selected_fg_color;
+}
+
+.expander row:selected:hover,
+.expander row:selected:focus:hover {
+    border-color: @theme_selected_fg_color;
+    color: @theme_selected_fg_color;
 }
 
 /**************
